@@ -6,6 +6,12 @@ app_name = 'food'
 urlpatterns = [
     path("", views.index, name="index"),
     path("item/", views.item, name="item"),
-    path("<int:id>/", views.details, name="itemDetails")
+    path("<int:id>/", views.details, name="itemDetails"),
+    
+    # add items
+    path("add/", views.create_item, name="createItems"),
+    
+    #update
+    path("update/<int:id>/", views.update_item, name="updateItems"),
 
 ]
