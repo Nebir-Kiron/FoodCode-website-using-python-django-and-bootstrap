@@ -1,5 +1,35 @@
-<form method='POST'>
-{% csrf_token %}
-{{form}}
-<button type="submit">Login</button>
-</form>
+{% extends 'food/base.html' %}
+
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header bg-success">
+                    <div class="card-title">Login</div>
+                </div>
+                <div class="card-body bg-info">
+                    <form method='POST'>
+                        {% csrf_token %}
+                          {% for i in form  %}
+                        <div class="form-group">
+                         
+                            {{i.name}}
+                            {{i}}
+                        
+                        </div>
+                        {% endfor %}
+                        <button class="btn btn-dark" type="submit">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
+
