@@ -13,7 +13,7 @@
         <h5>Tk.{{item.item_price}}</h5>
     </div>
     <div class="col-md-2">
-        <a href="{% url 'food:itemDetails' item.id %}" type="button" class="btn btn-success">View details</a>
+        <a href="{{item.get_absolute_url}}" type="button" class="btn btn-success">View details</a>
         <a href="{% url 'food:updateItems' item.id %}" type="button" class="btn btn-primary my-3">Update Item</a>
     </div>
 </div>
