@@ -9,7 +9,7 @@ urlpatterns = [
     path("<int:pk>/", views.Details.as_view(), name="itemDetails"),
     
     # add items
-    path("add/", views.create_item, name="createItems"),
+    path("add/", views.Create_item.as_view(), name="createItems"),
     
     #update
     path("update/<int:id>/", views.update_item, name="updateItems"),
